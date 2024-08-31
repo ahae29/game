@@ -2,10 +2,10 @@ import streamlit as st
 import numpy as np
 from tensorflow.keras.models import load_model
 from PIL import Image
+from tensorflow.keras.applications import VGG16
 
-# 모델 로드
-model = load_model('my_model.h5')  # Teachable Machine에서 저장한 모델 파일 경로
-model.save('my_model.h5')
+# VGG16 모델 로드 (미리 학습된 가중치 사용)
+model = VGG16(weights='imagenet')
 
 # 클래스 이름
 class_names = ['가위', '바위']  # 클래스 이름을 실제 클래스에 맞게 수정하세요.
