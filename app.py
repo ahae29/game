@@ -7,7 +7,7 @@ from PIL import Image
 model = load_model('my_model.h5')  # Teachable Machine에서 저장한 모델 파일 경로
 
 # 클래스 이름
-class_names = ['Class1', 'Class2', 'Class3']  # 클래스 이름을 실제 클래스에 맞게 수정하세요.
+class_names = ['Class1', 'Class2']  # 클래스 이름을 실제 클래스에 맞게 수정하세요.
 
 # Streamlit 애플리케이션 제목
 st.title("웹캠 동영상 분류기")
